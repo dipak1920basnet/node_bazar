@@ -44,51 +44,41 @@ app.use("/auth", authRoutes);
 
 // Error middleware (always last)
 app.use(errorHandler);
-
-
 import productRoutes from "./routes/product.routes.js";
 
 app.use("/products", productRoutes);
 
-
-
 import reviewRoutes from "./routes/review.routes.js";
 
 app.use("/reviews", reviewRoutes);
-
-
 import bidRoutes from "./routes/bid.routes.js";
 
 app.use("/bids", bidRoutes);
-
-
-
-
-
 import groupSaleRoutes from "./routes/groupSale.routes.js";
 app.use("/group-sale", groupSaleRoutes);
-
-
-
-
-
-
-
+import eventRoutes from "./routes/event.routes.js";
+app.use("/events", eventRoutes);
 import connectionRoutes from "./routes/connection.routes.js";
 app.use("/connections", connectionRoutes);
-
-
 
 
 import notificationRoutes from "./routes/notification.routes.js";
 app.use("/notifications", notificationRoutes);
 
+import paymentRoutes from "./routes/payment.routes.js";
+app.use("/payments", paymentRoutes);
+import qualityRoutes from "./routes/quality.routes.js";
+app.use("/quality", qualityRoutes);
+import analyticsRoutes from "./routes/analytics.routes.js";
+app.use("/analytics", analyticsRoutes);
 
 
+import eventRoutes from "./routes/event.routes.js";
+app.use("/events", eventRoutes);
 
+import paymentRoutes from "./routes/payment.routes.js";
+app.use("/payments", paymentRoutes);
 
 
 
 export default app;
-
-

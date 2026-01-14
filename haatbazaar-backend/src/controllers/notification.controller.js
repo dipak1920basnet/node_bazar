@@ -1,5 +1,6 @@
 import {
   getNotifications,
+  sendNotification,
   markAsRead
 } from "../services/notification.service.js";
 
