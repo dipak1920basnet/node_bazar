@@ -67,17 +67,18 @@ app.use("/notifications", notificationRoutes);
 
 import paymentRoutes from "./routes/payment.routes.js";
 app.use("/payments", paymentRoutes);
+
 import qualityRoutes from "./routes/quality.routes.js";
 app.use("/quality", qualityRoutes);
 import analyticsRoutes from "./routes/analytics.routes.js";
 app.use("/analytics", analyticsRoutes);
 
 
-import eventRoutes from "./routes/event.routes.js";
-app.use("/events", eventRoutes);
+import router from "./routes/event.routes.js";
+app.use("/events", router);
 
-import paymentRoutes from "./routes/payment.routes.js";
-app.use("/payments", paymentRoutes);
+// import paymentRoutes from "./routes/payment.routes.js";
+// app.use("/payments", paymentRoutes);
 
 
 

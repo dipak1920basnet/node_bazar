@@ -25,3 +25,22 @@ export const joinEvent = async (eventId, user) => {
 
   return event;
 };
+
+
+export const createEvent = async (data, creatorId) => {
+  const event = await Event.create({
+    name: data.name,
+    date: data.date,
+    location: {
+      lat: data.lat,
+      lng: data.lng
+    },
+    farmers: [],
+    participants: [],
+    products: [],
+    createdBy: creatorId
+  });
+
+  return event;
+};
+

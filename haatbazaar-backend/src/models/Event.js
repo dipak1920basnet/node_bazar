@@ -2,12 +2,31 @@ import mongoose from "mongoose";
 
 const eventSchema = new mongoose.Schema(
   {
-    name: String,
-    date: Date,
+    name: {
+      type: String,
+      required: true
+    },
+
+    date: {
+      type: Date,
+      required: true
+    },
 
     location: {
-      lat: Number,
-      lng: Number
+      lat: {
+        type: Number,
+        required: true
+      },
+      lng: {
+        type: Number,
+        required: true
+      }
+    },
+
+    createdBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true
     },
 
     participants: [
