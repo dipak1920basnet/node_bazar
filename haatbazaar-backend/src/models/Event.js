@@ -11,7 +11,10 @@ const eventSchema = new mongoose.Schema(
       type: Date,
       required: true
     },
-
+    endDate: {
+    type: Date,
+    required: true
+    },
     location: {
       lat: {
         type: Number,

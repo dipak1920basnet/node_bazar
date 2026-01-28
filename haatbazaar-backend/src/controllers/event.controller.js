@@ -17,9 +17,22 @@ export const join = async (req, res) => {
 // Add this
 export const create = async (req, res) => {
   try {
+    const { date, endDate } = req.body;
+
+    if (!endDate) {
+      return res.status(400).json({ message: "End date is required" });
+    }
+
+    if (new Date(endDate) <= new Date(date)) {
+      return res
+        .status(400)
+        .json({ message: "End date must be after start date" });
+    }
+
     const event = await createEventService(req.body, req.user);
     res.status(201).json(event);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
 };
+
